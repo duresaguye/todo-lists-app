@@ -87,6 +87,7 @@ function App() {
               <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
                 Task Master
               </h1>
+              <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
             </div>
             <div className="bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
               <TaskForm onAddTask={addTask} />
