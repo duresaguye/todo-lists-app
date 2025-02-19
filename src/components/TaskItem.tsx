@@ -69,16 +69,16 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index, onToggle, onRemove, mo
   }
 
   const priorityColor = {
-    low: "bg-green-200 dark:bg-green-700",
-    medium: "bg-yellow-200 dark:bg-yellow-700",
-    high: "bg-red-200 dark:bg-red-700",
+    low: "bg-green-700",
+    medium: "bg-yellow-700",
+    high: "bg-red-700",
   }
 
   return (
     <li
       ref={ref}
       style={{ opacity }}
-      className={`flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-102 hover:bg-gray-50 dark:hover:bg-gray-600 ${priorityColor[task.priority]}`}
+      className={`flex items-center justify-between p-3  bg-gray-700 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-102 ${priorityColor[task.priority]}`}
       data-handler-id={handlerId}
     >
       <div className="flex items-center">
@@ -86,18 +86,18 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index, onToggle, onRemove, mo
           type="checkbox"
           checked={task.completed}
           onChange={handleToggle}
-          className="form-checkbox h-5 w-5 text-blue-500 rounded focus:ring-blue-500 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-700"
+          className="form-checkbox h-5 w-5 text-blue-500 rounded focus:ring-blue-500 focus:ring-offset-gray-100 "
         />
         <div className="ml-3">
           <span
-            className={`${task.completed ? "line-through text-gray-400 dark:text-gray-500" : "text-gray-900 dark:text-white"}`}
+            className={`${task.completed ? "line-through  text-gray-500" : " text-white"}`}
           >
             {task.text}
           </span>
-          <div className="text-sm text-gray-500 dark:text-gray-400">
+          <div className="text-sm text-gray-500 ">
             {task.dueDate && <span className="mr-2">Due: {new Date(task.dueDate).toLocaleDateString()}</span>}
             {task.category && (
-              <span className="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-100 px-2 py-1 rounded-full text-xs">
+              <span className=" bg-blue-800  text-blue-100 px-2 py-1 rounded-full text-xs">
                 {task.category}
               </span>
             )}

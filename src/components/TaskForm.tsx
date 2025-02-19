@@ -31,18 +31,18 @@ const TaskForm: React.FC<TaskFormProps> = ({ onAddTask }) => {
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Add a new task"
-        className="w-full p-3 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+        className="w-full p-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
       />
       <input
         type="date"
         value={dueDate}
         onChange={(e) => setDueDate(e.target.value)}
-        className="w-full p-3 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+        className="w-full p-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
       />
       <select
         value={priority}
         onChange={(e) => setPriority(e.target.value as "low" | "medium" | "high")}
-        className="w-full p-3 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+        className="w-full p-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
       >
         <option value="low">Low Priority</option>
         <option value="medium">Medium Priority</option>
@@ -53,7 +53,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ onAddTask }) => {
         value={category}
         onChange={(e) => setCategory(e.target.value)}
         placeholder="Category"
-        className="w-full p-3 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+        className="w-full p-3 bg-gray-700 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
       />
       <button
         type="submit"
