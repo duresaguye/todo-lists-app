@@ -82,7 +82,7 @@ function App() {
         <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen transition-colors duration-300">
           <div className="container mx-auto p-4 max-w-md">
             <div className="flex justify-between items-center mb-8">
-              <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
+              <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
                 Todo app
               </h1>
             </div>
