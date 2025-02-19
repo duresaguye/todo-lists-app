@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react"
 import TaskForm from "./components/TaskForm"
 import TaskList from "./components/TaskList"
@@ -6,6 +7,7 @@ import ProgressBar from "./components/ProgressBar"
 
 import { DndProvider } from "react-dnd"
 import { HTML5Backend } from "react-dnd-html5-backend"
+import "./App.css"
 
 interface Task {
   id: number
@@ -83,8 +85,9 @@ function App() {
           <div className="container mx-auto p-4 max-w-md">
             <div className="flex justify-between items-center mb-8">
               <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
-                Todo app
+                Task Master
               </h1>
+              <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
             </div>
             <div className="bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
               <TaskForm onAddTask={addTask} />
@@ -94,7 +97,7 @@ function App() {
             </div>
           </div>
         </div>
-     
+      
     </DndProvider>
   )
 }

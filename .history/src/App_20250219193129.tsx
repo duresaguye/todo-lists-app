@@ -1,9 +1,10 @@
+
+
 import { useState, useEffect } from "react"
 import TaskForm from "./components/TaskForm"
 import TaskList from "./components/TaskList"
 import FilterButtons from "./components/FilterButtons"
 import ProgressBar from "./components/ProgressBar"
-
 import { DndProvider } from "react-dnd"
 import { HTML5Backend } from "react-dnd-html5-backend"
 
@@ -21,7 +22,7 @@ type FilterType = "all" | "active" | "completed"
 function App() {
   const [tasks, setTasks] = useState<Task[]>([])
   const [filter, setFilter] = useState<FilterType>("all")
-
+ 
 
   useEffect(() => {
     const storedTasks = localStorage.getItem("tasks")
@@ -34,6 +35,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks))
   }, [tasks])
+
 
 
   const addTask = (text: string, dueDate: string, priority: "low" | "medium" | "high", category: string) => {
@@ -79,12 +81,13 @@ function App() {
   return (
     <DndProvider backend={HTML5Backend}>
    
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen transition-colors duration-300">
+        <div className="bg-gradient-to-br from-gray-900 to-gray-800  txt-white min-h-screen transition-colors duration-300">
           <div className="container mx-auto p-4 max-w-md">
             <div className="flex justify-between items-center mb-8">
               <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
                 Todo app
               </h1>
+              
             </div>
             <div className="bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
               <TaskForm onAddTask={addTask} />

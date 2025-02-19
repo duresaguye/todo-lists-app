@@ -69,9 +69,9 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index, onToggle, onRemove, mo
   }
 
   const priorityColor = {
-    low: "bg-green-700",
-    medium: "bg-yellow-700",
-    high: "bg-red-700",
+    low: "bg-green-200 dark:bg-green-700",
+    medium: "bg-yellow-200 dark:bg-yellow-700",
+    high: "bg-red-200 dark:bg-red-700",
   }
 
   return (

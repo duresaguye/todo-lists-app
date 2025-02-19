@@ -78,7 +78,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index, onToggle, onRemove, mo
     <li
       ref={ref}
       style={{ opacity }}
-      className={`flex items-center justify-between p-3 bg-gray-700 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-102 hover:bg-gray-600 ${priorityColor[task.priority]}`}
+      className={`flex items-center justify-between p-3  bg-gray-700 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-102 ${priorityColor[task.priority]}`}
       data-handler-id={handlerId}
     >
       <div className="flex items-center">
@@ -86,18 +86,18 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index, onToggle, onRemove, mo
           type="checkbox"
           checked={task.completed}
           onChange={handleToggle}
-          className="form-checkbox h-5 w-5 text-blue-500 rounded focus:ring-blue-500 focus:ring-offset-gray-700"
+          className="form-checkbox h-5 w-5 text-blue-500 rounded focus:ring-blue-500 focus:ring-offset-gray-100 "
         />
         <div className="ml-3">
           <span
-            className={`${task.completed ? "line-through text-gray-500" : "text-white"}`}
+            className={`${task.completed ? "line-through  text-gray-500" : " text-white"}`}
           >
             {task.text}
           </span>
-          <div className="text-sm text-gray-400">
+          <div className="text-sm text-gray-500 ">
             {task.dueDate && <span className="mr-2">Due: {new Date(task.dueDate).toLocaleDateString()}</span>}
             {task.category && (
-              <span className="bg-blue-800 text-blue-100 px-2 py-1 rounded-full text-xs">
+              <span className=" bg-blue-800  text-blue-100 px-2 py-1 rounded-full text-xs">
                 {task.category}
               </span>
             )}
