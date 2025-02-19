@@ -1,0 +1,10 @@
+/* styles.css */
+@import "tailwindcss";
+
+body {
+  @apply transition-colors duration-300;
+}
+
+.dark {
+  @apply bg-gray-800 text-white; /* Tailwind dark background and light text color */
+}

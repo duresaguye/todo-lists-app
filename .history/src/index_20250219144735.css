@@ -1,0 +1,11 @@
+useEffect(() => {
+  const storedDarkMode = localStorage.getItem("darkMode");
+  const isDark = storedDarkMode ? JSON.parse(storedDarkMode) : false;
+  setDarkMode(isDark);
+  document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+}, []);
+
+useEffect(() => {
+  localStorage.setItem("darkMode", JSON.stringify(darkMode));
+  document.documentElement.setAttribute("data-theme", darkMode ? "dark" : "light");
+}, [darkMode]);
